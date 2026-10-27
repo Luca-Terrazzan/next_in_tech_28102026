@@ -1,16 +1,20 @@
-# NEXT IN TECH 2026
+# Next in Tech 2026 - Job Market Scraping
 
 Project developed for the Next in Tech 2026 Boolean event.
 
-## Introduction
+## Overview
 
-The goal is to produce an automated system that collects realtime sport matches and bet data into a database that can later be used for analysis and further actions.
+This project collects tech job postings from multiple job boards and stores them in a shared SQLite database (`job_postings.db`) for analysis.
 
-## Data sources
+## Notebooks
 
-For demo purposes, two freely available data sources will be used:
+- `nofluff.ipynb`: queries the NoFluffJobs search API and stores the results in the `nofluff` table.
+- `tech_compenso.ipynb`: scrapes job cards from techcompenso.com with Selenium and stores them in the `techcompenso` table.
 
-* diretta.it
-* valuestats.com
+## Data collected
 
-Both of these offer a realtime view of most sports matches.
+Each posting includes title, company, location, work mode, salary range (min/max), tags and a link to the full description.
+
+## Requirements
+
+See `requirements.txt` for the Python dependencies (httpx, pandas, selenium, ipykernel).
