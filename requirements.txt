@@ -3,3 +3,4 @@ selenium
 ipykernel
 httpx
 sqlite3
+matplotlib
